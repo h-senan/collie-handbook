@@ -94,6 +94,8 @@ carousel2links: \["url1", "url2", "url3"\]
 };
 ```
 
+### constant常量
+
 ```js
 /**
  * 缓存常量
