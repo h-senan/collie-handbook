@@ -1,154 +1,156 @@
-# collie
+# \# collie项目开发手册
 
-微信小程序组件命名规范
+# \#\# 常用vscode插件
 
+# 
 
+# 插件名 \| 功能
 
-标签（空格分隔）： css js
+# :-\|:-
 
+# change-case\| 变量名格式转换\(驼峰转肉串\)
 
+# Path Intellisense\|路径字符串自动补全
 
+# Project Manager\|多项目一键切换
 
+# TODO Highlight\|高亮'TODO'
 
-\#\#css
+# Vetur\|vue格式文件代码高亮
 
-采用以“组件名”开头的短横杆式+驼峰+下划线混合命名法（aaa-abcDE\_abc）
+# Auto Rename Tag\|html标签自动书写
 
-以carousel轮播组件为例：
+# 
 
-\`\`\`html
+# \#\# 组件\(component\)开发要点
 
-&lt;style lang="sass" scoped&gt;
+# 
 
-.carousel-container
+# \#\#\# css 命名
 
-  position: relative
+# 采用以“组件名”开头的短横杆式+驼峰+下划线混合命名法（aaa-abcDE\_abc）
 
-  
+# 以carousel轮播组件为例：
 
-.carousel-img
+# \`\`\`html
 
-  width: 100%
+# &lt;style lang="sass" scoped&gt;
 
-  height: 100%
+# .carousel-container
 
+#   position: relative
 
+#   
 
-&lt;/style&gt;
+# .carousel-img
 
-\`\`\`
+#   width: 100%
 
-## js
+#   height: 100%
 
-### props 传值
+# 
 
-采用以“组件名”开头的驼峰命名法（aaaBc\)
+# &lt;/style&gt;
 
-例：
+# \`\`\`
 
-\`\`\`javascript
+# \#\#\# js
 
-props = {
+# \#\#\#\# props 传值
 
-    carouselDots: Boolean,         //是否显示面板指示点
+# 采用以“组件名”开头的驼峰命名法（aaaBc\)
 
-    carouselAutoplay: Boolean,     //是否自动切换
+# 例：
 
-    carouselInterval: String,      //自动切换时间间隔
+# \`\`\`javascript
 
-    carouselDuration: String,      //滑动动画时长
+# props = {
 
-    carouselImgUrl: Array,         //轮播图片地址
+#     carouselDots: Boolean,         //是否显示面板指示点
 
-    carouselLinks: Array,          //图片跳转地址
+#     carouselAutoplay: Boolean,     //是否自动切换
 
-  };
+#     carouselInterval: String,      //自动切换时间间隔
 
-\`\`\`
+#     carouselDuration: String,      //滑动动画时长
 
-\#\#\# pages-data传入组件数据
+#     carouselImgUrl: Array,         //轮播图片地址
 
-采用以“组件名”开头+数字+驼峰命名法（aaa1Bc）同一页面中多次调用相同组件传入组件data以数字区分
+#     carouselLinks: Array,          //图片跳转地址
 
-例：
+#   };
 
-\`\`\`javascript
+# \`\`\`
 
-data = {
+# \#\#\#\# pages-data传入组件数据
 
-    carouselDots: true,
+# 采用以“组件名”开头+数字+驼峰命名法（aaa1Bc）同一页面中多次调用相同组件传入组件data以数字区分
 
-    carouselAutoplay: true,
+# 例：
 
-    carouselInterval: '2000',
+# \`\`\`javascript
 
-    carouselDuration: '500',
+# data = {
 
-    carouselImgUrl: \[
+#     carouselDots: true,
 
-      "http://img02.tooopen.com/images/20150928/tooopen\_sy\_143912755726.jpg",
+#     carouselAutoplay: true,
 
-      "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175866434296.jpg",
+#     carouselInterval: '2000',
 
-      "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
+#     carouselDuration: '500',
 
-    \],
+#     carouselImgUrl: \[
 
-    carousellinks: \["url1", "url2", "url3"\],
+#       "http://img02.tooopen.com/images/20150928/tooopen\_sy\_143912755726.jpg",
 
+#       "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175866434296.jpg",
 
+#       "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
 
-    carousel2Dots: true,
+#     \],
 
-    carousel2Autoplay: true,
+#     carousellinks: \["url1", "url2", "url3"\],
 
-    carousel2Interval: '1000',
+# 
 
-    carousel2Duration: '800',
+#     carousel2Dots: true,
 
-    carousel2ImgUrl: \[
+#     carousel2Autoplay: true,
 
-      "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175866434296.jpg",
+#     carousel2Interval: '1000',
 
-      "http://img02.tooopen.com/images/20150928/tooopen\_sy\_143912755726.jpg",
+#     carousel2Duration: '800',
 
-      "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
+#     carousel2ImgUrl: \[
 
-    \],
+#       "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175866434296.jpg",
 
-    carousel2links: \["url1", "url2", "url3"\]
+#       "http://img02.tooopen.com/images/20150928/tooopen\_sy\_143912755726.jpg",
 
-  };
+#       "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
 
-\`\`\`
+#     \],
 
-\#\#\# 常量constant
+#     carousel2links: \["url1", "url2", "url3"\]
 
-\`\`\`javascript
+#   };
 
-/\*\*
+# \`\`\`
 
- \* 缓存常量
+# 
 
- \*/
+# 
 
+# 
 
+# 
 
-const USER\_INFO='userInfo'// 用户信息
+# 
 
-const SESSION\_ID='sessionId'//header中携带
+# 
 
+# 
 
 
-module.exports={
-
-  USER\_INFO,
-
-  SESSION\_ID,
-
-}
-
-
-
-\`\`\`
 
