@@ -1,188 +1,162 @@
-##### \#collie
+# collie
 
-##### 微信小程序组件命名规范
+微信小程序组件命名规范
 
-##### 
 
-##### 标签（空格分隔）： css js
 
-##### 
+## css
 
-##### 
+采用以“组件名”开头的短横杆式+驼峰+下划线混合命名法（aaa-abcDE\_abc）
 
-##### \#\#css
+以carousel轮播组件为例：
 
-##### 采用以“组件名”开头的短横杆式+驼峰+下划线混合命名法（aaa-abcDE\_abc）
+\`\`\`html
 
-##### 以carousel轮播组件为例：
+&lt;style lang="sass" scoped&gt;
 
-##### \`\`\`html
+.carousel-container
 
-##### &lt;style lang="sass" scoped&gt;
+  position: relative
 
-##### .carousel-container
+  
 
-#####   position: relative
+.carousel-img
 
-#####   
+  width: 100%
 
-##### .carousel-img
+  height: 100%
 
-#####   width: 100%
 
-#####   height: 100%
 
-##### 
+&lt;/style&gt;
 
-##### &lt;/style&gt;
+\`\`\`
 
-##### \`\`\`
+\#\#js
 
-##### \#\#js
+\#\#\#props 传值
 
-##### \#\#\#props 传值
+采用以“组件名”开头的驼峰命名法（aaaBc\)
 
-##### 采用以“组件名”开头的驼峰命名法（aaaBc\)
+例：
 
-##### 例：
+\`\`\`javascript
 
-##### \`\`\`javascript
+props = {
 
-##### props = {
+    carouselDots: Boolean,         //是否显示面板指示点
 
-#####     carouselDots: Boolean,         //是否显示面板指示点
+    carouselAutoplay: Boolean,     //是否自动切换
 
-#####     carouselAutoplay: Boolean,     //是否自动切换
+    carouselInterval: String,      //自动切换时间间隔
 
-#####     carouselInterval: String,      //自动切换时间间隔
+    carouselDuration: String,      //滑动动画时长
 
-#####     carouselDuration: String,      //滑动动画时长
+    carouselImgUrl: Array,         //轮播图片地址
 
-#####     carouselImgUrl: Array,         //轮播图片地址
+    carouselLinks: Array,          //图片跳转地址
 
-#####     carouselLinks: Array,          //图片跳转地址
+  };
 
-#####   };
+\`\`\`
 
-##### \`\`\`
+\#\#\# pages-data传入组件数据
 
-##### \#\#\# pages-data传入组件数据
+采用以“组件名”开头+数字+驼峰命名法（aaa1Bc）同一页面中多次调用相同组件传入组件data以数字区分
 
-##### 采用以“组件名”开头+数字+驼峰命名法（aaa1Bc）同一页面中多次调用相同组件传入组件data以数字区分
+例：
 
-##### 例：
+\`\`\`javascript
 
-##### \`\`\`javascript
+data = {
 
-##### data = {
+    carouselDots: true,
 
-#####     carouselDots: true,
+    carouselAutoplay: true,
 
-#####     carouselAutoplay: true,
+    carouselInterval: '2000',
 
-#####     carouselInterval: '2000',
+    carouselDuration: '500',
 
-#####     carouselDuration: '500',
+    carouselImgUrl: \[
 
-#####     carouselImgUrl: \[
+      "http://img02.tooopen.com/images/20150928/tooopen\_sy\_143912755726.jpg",
 
-#####       "http://img02.tooopen.com/images/20150928/tooopen\_sy\_143912755726.jpg",
+      "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175866434296.jpg",
 
-#####       "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175866434296.jpg",
+      "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
 
-#####       "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
+    \],
 
-#####     \],
+    carousellinks: \["url1", "url2", "url3"\],
 
-#####     carousellinks: \["url1", "url2", "url3"\],
 
-##### 
 
-#####     carousel2Dots: true,
+    carousel2Dots: true,
 
-#####     carousel2Autoplay: true,
+    carousel2Autoplay: true,
 
-#####     carousel2Interval: '1000',
+    carousel2Interval: '1000',
 
-#####     carousel2Duration: '800',
+    carousel2Duration: '800',
 
-#####     carousel2ImgUrl: \[
+    carousel2ImgUrl: \[
 
-#####       "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175866434296.jpg",
+      "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175866434296.jpg",
 
-#####       "http://img02.tooopen.com/images/20150928/tooopen\_sy\_143912755726.jpg",
+      "http://img02.tooopen.com/images/20150928/tooopen\_sy\_143912755726.jpg",
 
-#####       "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
+      "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
 
-#####     \],
+    \],
 
-#####     carousel2links: \["url1", "url2", "url3"\]
+    carousel2links: \["url1", "url2", "url3"\]
 
-#####   };
+  };
 
-##### \`\`\`
+\`\`\`
 
-##### \#\#\# 常量constant
+\#\#\# 常量constant
 
-##### \`\`\`javascript
+\`\`\`javascript
 
-##### /\*\*
+/\*\*
 
-#####  \* 缓存常量
+ \* 缓存常量
 
-#####  \*/
+ \*/
 
-##### 
 
-##### const USER\_INFO='userInfo'// 用户信息
 
-##### const SESSION\_ID='sessionId'//header中携带
+const USER\_INFO='userInfo'// 用户信息
 
-##### 
+const SESSION\_ID='sessionId'//header中携带
 
-##### module.exports={
 
-#####   USER\_INFO,
 
-#####   SESSION\_ID,
+module.exports={
 
-##### }
+  USER\_INFO,
 
-##### 
+  SESSION\_ID,
 
-##### \`\`\`
+}
 
-##### 
 
-##### 
 
-##### 
+\`\`\`
 
-##### 
 
-##### 
 
-##### 
 
-##### 
 
-# 
 
-# 
 
-# 
 
-# 
 
-# 
 
-# 
 
-# 
 
-# 
-
-# 
 
 
 
