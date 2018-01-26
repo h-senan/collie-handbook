@@ -58,7 +58,7 @@ carouselInterval: '2000',
 
 carouselDuration: '500',
 
-carouselImgUrl: \[
+carouselImgUrl: [
 
   "http://img02.tooopen.com/images/20150928/tooopen\_sy\_143912755726.jpg",
 
@@ -66,9 +66,9 @@ carouselImgUrl: \[
 
   "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
 
-\],
+],
 
-carousellinks: \["url1", "url2", "url3"\],
+carousellinks: ["url1", "url2", "url3"],
 
 
 
@@ -80,7 +80,7 @@ carousel2Interval: '1000',
 
 carousel2Duration: '800',
 
-carousel2ImgUrl: \[
+carousel2ImgUrl: [
 
   "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175866434296.jpg",
 
@@ -88,9 +88,9 @@ carousel2ImgUrl: \[
 
   "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
 
-\],
+],
 
-carousel2links: \["url1", "url2", "url3"\]
+carousel2links: ["url1", "url2", "url3"]
 };
 ```
 
