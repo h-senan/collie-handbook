@@ -8,19 +8,15 @@
 
 以carousel轮播组件为例：
 
-&lt;style lang="sass" scoped&gt;
-
+```css
+<style lang="sass" scoped>
 .carousel-container
-
 position: relative
-
 .carousel-img
-
 width: 100%
-
 height: 100%
-
-&lt;/style&gt;
+</style>
+```
 
 ## js
 
@@ -30,9 +26,8 @@ height: 100%
 
 例：
 
-props = {
-
 ```js
+props = {
 carouselDots: Boolean,         //是否显示面板指示点
 
 carouselAutoplay: Boolean,     //是否自动切换
@@ -44,19 +39,17 @@ carouselDuration: String,      //滑动动画时长
 carouselImgUrl: Array,         //轮播图片地址
 
 carouselLinks: Array,          //图片跳转地址
+};
 ```
 
-};
-
-###  pages-data传入组件数据
+### pages-data传入组件数据
 
 采用以“组件名”开头+数字+驼峰命名法（aaa1Bc）同一页面中多次调用相同组件传入组件data以数字区分
 
 例：
 
-data = {
-
 ```js
+data = {
 carouselDots: true,
 
 carouselAutoplay: true,
@@ -98,31 +91,22 @@ carousel2ImgUrl: \[
 \],
 
 carousel2links: \["url1", "url2", "url3"\]
+};
 ```
 
-};
+```js
+/**
+ * 缓存常量
+ */
 
-\#\#\#  常量constant
-
-\`\`\`JavaScript
-
-/\*\*
-
-\* 缓存常量
-
-\*/
-
-const USER\_INFO='userInfo'// 用户信息
-
-const SESSION\_ID='sessionId'//header中携带
+const USER_INFO='userInfo'// 用户信息
+const SESSION_ID='sessionId'//header中携带
 
 module.exports={
-
-USER\_INFO,
-
-SESSION\_ID,
-
+  USER_INFO,
+  SESSION_ID,
 }
+```
 
-\`\`\`
+
 
