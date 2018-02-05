@@ -22,78 +22,53 @@ height: 100%
 
 ### props 传值
 
-采用以“组件名”开头的驼峰命名法（aaaBc\)
+Object命名：“组件名”+Option
+key命名：“组件名”开头的驼峰命名法（aaaBc\)
 
 例：
 
 ```js
 props = {
-carouselDots: Boolean,         //是否显示面板指示点
-
-carouselAutoplay: Boolean,     //是否自动切换
-
-carouselInterval: String,      //自动切换时间间隔
-
-carouselDuration: String,      //滑动动画时长
-
-carouselImgUrl: Array,         //轮播图片地址
-
-carouselLinks: Array,          //图片跳转地址
-};
+    carouselOption: Object,
+  };
 ```
-
-### pages-data传入组件数据
-
-采用以“组件名”开头+数字+驼峰命名法（aaa1Bc）同一页面中多次调用相同组件传入组件data以数字区分
-
-例：
-
+carouselOption数据结构：
 ```js
-data = {
-carouselDots: true,
-
-carouselAutoplay: true,
-
-carouselInterval: '2000',
-
-carouselDuration: '500',
-
-carouselImgUrl: [
-
-  "http://img02.tooopen.com/images/20150928/tooopen\_sy\_143912755726.jpg",
-
-  "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175866434296.jpg",
-
-  "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
-
-],
-
-carousellinks: ["url1", "url2", "url3"],
-
-
-
-carousel2Dots: true,
-
-carousel2Autoplay: true,
-
-carousel2Interval: '1000',
-
-carousel2Duration: '800',
-
-carousel2ImgUrl: [
-
-  "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175866434296.jpg",
-
-  "http://img02.tooopen.com/images/20150928/tooopen\_sy\_143912755726.jpg",
-
-  "http://img06.tooopen.com/images/20160818/tooopen\_sy\_175833047715.jpg"
-
-],
-
-carousel2links: ["url1", "url2", "url3"]
-};
+  carouselOption: {
+  carouselDots: Boolean,          // 是否显示面板指示点 默认true
+  carouselArrows: Boolean,        // 是否显示箭头 默认false
+  carouselAutoplay: Boolean,      // 是否自动切换 默认true
+  carouselCircular: Boolean,      // 是否采用衔接滑动 默认true
+  carouselVertical: Boolean,      // 滑动方向是否为纵向 默认true
+  carouselInterval: Number,       // 自动切换时间间隔 ms 默认2000
+  carouselDuration: Number,       // 滑动动画时长 ms 默认800
+  carouselHeight: String,         // 轮播组件高度，需要带单位，可以为px,rpx,vh等css单位
+  carouselActiveDotColor: String, // 当前选中的指示点颜色 
+  carouselImg:[{
+              image: '',    // 图片地址
+              url: ''       // 图片跳转地址
+            }]
+  }               
 ```
 
+### 调用组件页
+如何调用组件：
+```js
+<template> 
+  <carouselIDa :carouselOption="carouselIDa"></carouselIDa>
+</template>
+<template> 
+  <carouselIDb :carouselOption="carouselIDb"></carouselIDb>
+</template>
+```
+同一页面多次复用该组件，components命名方式："组件名"+ID+随机字母
+例:
+```js
+components = {
+    carouselIDa: Carousel,
+    carouselIDb: Carousel
+  };
+```
 ### constant常量
 
 ```js
