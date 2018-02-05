@@ -69,7 +69,7 @@ components = {
     carouselIDb: Carousel
   };
 ```
-data:
+data: 传入get请求所需的componentId
 ```js
 data = {
     carouselIDa:{
