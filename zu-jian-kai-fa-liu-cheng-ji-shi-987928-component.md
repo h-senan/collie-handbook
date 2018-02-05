@@ -69,6 +69,17 @@ components = {
     carouselIDb: Carousel
   };
 ```
+data:
+```js
+data = {
+    carouselIDa:{
+      componentId: 'wnvoenvjdw'
+    },
+    carouselIDb:{
+      componentId: 'gasfdagfeg'
+    },
+  };
+```
 ### constant常量
 
 ```js
