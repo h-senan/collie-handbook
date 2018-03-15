@@ -1,23 +1,5 @@
 # collie
 
-微信小程序组件命名规范
-
-## css
-
-采用以“组件名”开头的短横杆式+驼峰+下划线混合命名法（aaa-abcDE\_abc）
-
-以carousel轮播组件为例：
-
-```css
-<style lang="sass" scoped>
-.carousel-container
-position: relative
-.carousel-img
-width: 100%
-height: 100%
-</style>
-```
-
 ## js
 
 ### props 传值
